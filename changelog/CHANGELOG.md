@@ -1,21 +1,17 @@
-﻿# CHANGELOG
+# CHANGELOG
 
-## Ver1.2 - 画面設計書追加
+## Ver1.3 - DB設計・ER図
 
 ### Added
 
-- 画面設計書 Ver1.2 を追加。
-- 画面ID体系を定義。
-- 管理者画面、従業員画面、入社手続き、従業員申請、Web給与明細、マイナンバー、e-Gov、設定画面の詳細設計を追加。
-- 各画面に目的、利用者、主な項目、ボタン、API、DB、権限、ログ、通知を定義。
-- Claude Code向け画面実装プロンプトを追加。
+- DB設計書 `database/06_database_design_v1.3.md` を追加。
+- Mermaid形式ER図 `database/er_v1.3.md` を追加。
+- Claude Code向けDB実装プロンプト `prompts/claude_code_database_prompt_v1.3.md` を追加。
+- 従業員、入社手続き、従業員申請、給与明細、マイナンバー、e-Gov、権限、通知、操作ログの主要テーブルを定義。
 
-### Changed
+### Design Policy
 
-- READMEをVer1.2基準に更新。
-- 画面一覧を詳細設計へ接続できる構成に変更。
-
-### Notes
-
-- GitHubへ反映する場合はZIPそのものではなく、中身のファイルを既存リポジトリへコピーする。
-- README.mdとCHANGELOG.mdは既存ファイルを上書きする想定。
+- 既存勤怠システムの従業員マスターを正マスターとする方針をDB設計に反映。
+- Aurens HR側では `employee_code` を連携キーとして保持。
+- マイナンバーは初期版では番号保存せず、提出状況のみ管理。
+- 将来的なe-Gov送信、公文書取得、履歴管理に対応できる構成とした。
