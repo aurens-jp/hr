@@ -1,54 +1,42 @@
-﻿# Aurens HR Platform
+﻿# Aurens HR Platform Design
 
-Aurens HR Platform は、既存勤怠管理システムと連携し、人事労務業務をWeb上で一元管理するための設計プロジェクトです。
+Aurens HR Platform は、既存勤怠管理システムを正マスターとして連携し、人事労務、入社手続き、従業員申請、Web給与明細、マイナンバー提出状況管理、e-Gov電子申請を統合するWebシステムの設計リポジトリです。
 
-本リポジトリは、システム開発に必要な仕様書、画面設計、DB設計、API設計、権限設計、通知設計、変更履歴を管理します。
+## Current Version
 
-## 基本方針
+- Version: 1.2
+- Scope: 画面設計書の追加
+- Status: 基本設計・業務フロー・機能一覧・画面一覧・画面詳細設計を整備中
 
-- 既存勤怠管理システムの従業員マスターを正マスターとする
-- 従業員情報の二重管理を避ける
-- 職員IDをキーにして勤怠システムと連携する
-- 人事労務側では追加情報、申請、入社手続き、給与明細、マイナンバー状況、e-Gov電子申請を管理する
-- Webブラウザで動作するシステムとして設計する
-- 将来的に給与計算、年末調整、人事評価、AI支援機能へ拡張できる構成とする
-
-## 初期対象機能
-
-- 人事労務管理
-- 入社手続き
-- 従業員情報の申請
-- Web給与明細
-- マイナンバー提出状況管理
-- e-Gov電子申請
-- 権限管理
-- 通知管理
-- 操作ログ
-- CSVインポート・エクスポート
-
-## ディレクトリ構成
+## Directory Structure
 
 ```text
-aurens-hr-platform/
-├─ README.md
-├─ docs/
-│  ├─ 00_project_overview.md
-│  ├─ 01_basic_design.md
-│  └─ 99_change_history.md
-├─ database/
-├─ api/
-├─ screens/
-├─ prompts/
-└─ changelog/
-   └─ CHANGELOG.md
+README.md
+docs/
+  01_basic_design.md
+  02_business_flow.md
+  03_function_list.md
+  04_screen_list.md
+  05_screen_design_v1.2.md
+screens/
+  screen_design_index_v1.2.md
+prompts/
+  claude_code_screen_prompt_v1.2.md
+changelog/
+  CHANGELOG.md
 ```
 
-## 版管理方針
+## Design Policy
 
-- main: 確定版
-- develop: 作業中
-- feature/*: 機能追加・仕様追加ごとの作業
+1. 既存勤怠管理システムを従業員正マスターとする。
+2. 人事労務側は追加情報・申請・承認・帳票・電子申請を管理する。
+3. 申請フォーム、承認ルート、通知、権限は設定で変更可能にする。
+4. 画面ID・API・DB・権限コードを明確にし、AI開発ツールへ渡しやすい仕様にする。
+5. マイナンバーは初期版ではステータス管理のみとし、将来の暗号化保存に対応できる設計にする。
 
-## 変更履歴
+## Latest Added Files
 
-変更内容は `docs/99_change_history.md` および `changelog/CHANGELOG.md` に記録します。
+- docs/05_screen_design_v1.2.md
+- screens/screen_design_index_v1.2.md
+- prompts/claude_code_screen_prompt_v1.2.md
+- changelog/CHANGELOG.md

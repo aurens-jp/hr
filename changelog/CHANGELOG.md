@@ -1,17 +1,21 @@
 ﻿# CHANGELOG
 
-## [1.0.0] - 2026-07-07
+## Ver1.2 - 画面設計書追加
 
 ### Added
 
-- 初期リポジトリ構成を作成
-- README.md を作成
-- docs/00_project_overview.md を作成
-- docs/01_basic_design.md を作成
-- docs/99_change_history.md を作成
-- changelog/CHANGELOG.md を作成
+- 画面設計書 Ver1.2 を追加。
+- 画面ID体系を定義。
+- 管理者画面、従業員画面、入社手続き、従業員申請、Web給与明細、マイナンバー、e-Gov、設定画面の詳細設計を追加。
+- 各画面に目的、利用者、主な項目、ボタン、API、DB、権限、ログ、通知を定義。
+- Claude Code向け画面実装プロンプトを追加。
+
+### Changed
+
+- READMEをVer1.2基準に更新。
+- 画面一覧を詳細設計へ接続できる構成に変更。
 
 ### Notes
 
-- GitHubでの文字化けを避けるため、本文はUTF-8 BOM付きで保存する想定
-- フォルダ名とファイル名は英数字中心とし、日本語ファイル名を避ける
+- GitHubへ反映する場合はZIPそのものではなく、中身のファイルを既存リポジトリへコピーする。
+- README.mdとCHANGELOG.mdは既存ファイルを上書きする想定。
