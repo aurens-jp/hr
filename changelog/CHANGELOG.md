@@ -1,17 +1,18 @@
-# CHANGELOG
+﻿# CHANGELOG
 
-## Ver1.3 - DB設計・ER図
+## Ver1.4 - 開発標準・開発憲章追加
 
 ### Added
 
-- DB設計書 `database/06_database_design_v1.3.md` を追加。
-- Mermaid形式ER図 `database/er_v1.3.md` を追加。
-- Claude Code向けDB実装プロンプト `prompts/claude_code_database_prompt_v1.3.md` を追加。
-- 従業員、入社手続き、従業員申請、給与明細、マイナンバー、e-Gov、権限、通知、操作ログの主要テーブルを定義。
+- Aurens HR Platform 開発標準 Ver1.4 を追加
+- Aurens HR Platform 開発憲章 Ver1.0 を追加
+- Claude Code用プロジェクトルールを追加
+- Claude Code用コーディングルールを追加
+- Git運用ルールを追加
+- Vercel + Supabase + Next.js への移行プロンプトを追加
 
-### Design Policy
+### Changed
 
-- 既存勤怠システムの従業員マスターを正マスターとする方針をDB設計に反映。
-- Aurens HR側では `employee_code` を連携キーとして保持。
-- マイナンバーは初期版では番号保存せず、提出状況のみ管理。
-- 将来的なe-Gov送信、公文書取得、履歴管理に対応できる構成とした。
+- 技術方針を Laravel / MySQL から Next.js / Supabase / Vercel 中心へ変更
+- ローカル環境依存を避ける方針を明文化
+- 1Issue単位でAI実装する運用を明文化

@@ -1,22 +1,20 @@
-# Aurens HR Platform Design Documents
+﻿# Aurens HR Platform
 
-## Version
+Aurens HR Platform は、人事労務・勤怠・給与・電子申請を統合するクラウドHRプラットフォームです。
 
-Current: Ver1.3
+## Ver1.4 方針
 
-## Overview
+- GitHub / Vercel / Supabase を中心に構築する
+- Next.js + TypeScript を採用する
+- 既存勤怠システムの従業員マスターを正マスターとする
+- 人事労務側では追加情報、申請、入社手続き、給与明細、e-Gov、マイナンバー状態管理を扱う
+- Claude Code 等のAI開発ツールが理解しやすい構成にする
 
-Aurens HR Platform は、既存勤怠管理システムを正マスターとして、人事労務、入社手続き、従業員申請、Web給与明細、マイナンバー提出状況、e-Gov電子申請を統合管理するWebシステムである。
+## 重要ドキュメント
 
-## Ver1.3 Added Files
-
-- `database/06_database_design_v1.3.md`
-- `database/er_v1.3.md`
-- `prompts/claude_code_database_prompt_v1.3.md`
-- `changelog/CHANGELOG.md`
-
-## GitHub Operation
-
-ZIPはGitHubに置かず、中身のファイルを既存リポジトリへコピーする。
-
-`README.md` と `changelog/CHANGELOG.md` は最新版で上書きする。
+- `docs/13_development_standard_v1.4.md`
+- `docs/14_development_charter_v1.4.md`
+- `claude/01_project_rules.md`
+- `claude/02_coding_rules.md`
+- `claude/03_git_rules.md`
+- `prompts/claude_code_v14_migration_prompt.md`
